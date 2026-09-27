@@ -305,7 +305,17 @@ footer { background: var(--night); color: #9ea4aa; font-size: 16px; padding: 32p
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .to-top { text-decoration: none; }
 .to-top:hover { color: var(--saffron); }
-.credits { font-size: 13px; opacity: .7; margin-top: 14px; }
+.footer-links { display: flex; gap: 24px; align-items: baseline; position: relative; }
+.credits summary { cursor: pointer; list-style: none; }
+.credits summary::-webkit-details-marker { display: none; }
+.credits summary:hover { color: var(--saffron); }
+.credits p {
+  position: absolute; right: 0; bottom: calc(100% + 12px); width: min(420px, calc(100vw - 32px));
+  background: #1b2024; border: 1px solid rgba(255,255,255,.1); border-radius: 12px;
+  padding: 14px 16px; font-size: 13px; line-height: 1.5; color: #c4c9ce;
+  box-shadow: 0 16px 40px -16px rgba(0,0,0,.6);
+}
+.credits a { text-decoration: underline; }
 .credits a:hover { color: var(--saffron); }
 
 @media (prefers-reduced-motion: reduce) {
